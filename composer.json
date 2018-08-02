@@ -1,6 +1,6 @@
 {
   "name": "betalabs/credit-card-type",
-  "description": "Script to calidate and get credit card type by number",
+  "description": "Script to validate and get credit card type by number",
   "keywords": [
     "card",
     "credit card",

@@ -29,48 +29,49 @@ class CreditCardType
      * @param  int
      * @return string
      */
-    public static function get($number)
+    public static function get($cardNumber)
     {
-        if (Maestro::valid($number)) {
+        $cardNumber = preg_replace(
+            '/[^0-9]/', '', $cardNumber
+        );
+
+        if (Maestro::valid($cardNumber)) {
             return Types::MAESTRO;
         }
-        if (DinersClub::valid($number)) {
+        if (DinersClub::valid($cardNumber)) {
             return Types::DINNERS;
         }
-        if (Laser::valid($number)) {
+        if (Laser::valid($cardNumber)) {
             return Types::LASER;
         }
-        if (Jcb::valid($number)) {
+        if (Jcb::valid($cardNumber)) {
             return Types::JCB;
         }
-        if (UnionPay::valid($number)) {
+        if (UnionPay::valid($cardNumber)) {
             return Types::UNIONPAY;
         }
-        if (Mastercard::valid($number)) {
+        if (Mastercard::valid($cardNumber)) {
             return Types::MASTERCARD;
         }
-        if (Amex::valid($number)) {
+        if (Amex::valid($cardNumber)) {
             return Types::AMEX;
         }
-        if (Elo::valid($number)) {
+        if (Elo::valid($cardNumber)) {
             return Types::ELO;
         }
-        if (Discover::valid($number)) {
+        if (Discover::valid($cardNumber)) {
             return Types::DISCOVER;
         }
-        if (Visa::valid($number)) {
+        if (Visa::valid($cardNumber)) {
             return Types::VISA;
         }
-        if (Aura::valid($number)) {
+        if (Aura::valid($cardNumber)) {
             return Types::AURA;
         }
-        if (Hipercard::valid($number)) {
+        if (Hipercard::valid($cardNumber)) {
             return Types::HIPERCARD;
         }
-//        if (Hiper::valid($number)) {
-//            return Types::HIPER;
-//        }
-        if (Visaelectron::valid($number)) {
+        if (Visaelectron::valid($cardNumber)) {
             return Types::VISAELECTRON;
         }
 

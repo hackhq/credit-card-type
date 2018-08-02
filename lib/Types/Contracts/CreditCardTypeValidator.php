@@ -9,8 +9,8 @@ interface CreditCardTypeValidator
 {
 
     /**
-     * @param $number
+     * @param $cardNumber
      * @return bool
      */
-    public static function valid($number);
+    public static function valid($cardNumber);
 }
