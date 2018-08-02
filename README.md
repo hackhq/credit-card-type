@@ -16,7 +16,3 @@ $card = '4111111111111111';
 
 echo CreditCardType\CreditCardType::get($card); //visa
 ```
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
