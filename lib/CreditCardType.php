@@ -39,7 +39,7 @@ class CreditCardType
             return Types::MAESTRO;
         }
         if (DinersClub::valid($cardNumber)) {
-            return Types::DINNERS;
+            return Types::DINERS;
         }
         if (Laser::valid($cardNumber)) {
             return Types::LASER;

@@ -13,7 +13,7 @@ class Types extends Enum
     const __default = self::UNKNOWN;
 
     const AMEX = 'amex';
-    const DINNERS = 'dinners';
+    const DINERS = 'diners';
     const VISA = 'visa';
     const MASTERCARD = 'mastercard';
     const MAESTRO = 'maestro';
